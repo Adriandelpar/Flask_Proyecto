@@ -25,6 +25,24 @@ body {
 a { color: var(--primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* ── Header / Nav ────────────────────────────────────── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--text); }
+
 /* ── Main ────────────────────────────────────────────── */
 main {
   flex: 1;
@@ -56,6 +74,7 @@ h2 { font-size: 1.1rem; margin-bottom: .6rem; color: var(--muted); }
 .hero-logo {
   width: 180px;
 }
+
 
 .hero-hint { color: var(--muted); font-size: .95rem; }
 
@@ -115,7 +134,7 @@ tr:hover td { background: #f8fafc; }
 .result-count { color: var(--muted); font-size: .88rem; margin-bottom: .6rem; }
 .no-results   { color: var(--muted); margin-top: 1rem; }
 
-/* ── Detail card (en construcción) ──────────────────── */
+/* ── Detail card ─────────────────────────────────────── */
 .back-link { font-size: .9rem; }
 
 .detail-card {
@@ -146,7 +165,8 @@ tr:hover td { background: #f8fafc; }
   gap: 1.5rem;
 }
 
-/* TODO: estilos de .detail-section.full-width y tabla de ciudades */
+
+.detail-section.full-width { grid-column: 1 / -1; }
 
 .detail-section ul { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
 .detail-section li { font-size: .93rem; }

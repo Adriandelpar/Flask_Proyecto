@@ -27,9 +27,9 @@ def index():
 
 @app.route("/paises")
 def lista_paises():
-    nombre_q     = request.args.get("nombre", "").strip()
+    nombre_q  = request.args.get("nombre", "").strip()
     continente_q = request.args.get("continente", "")
-    orden        = request.args.get("orden", "asc")
+    orden = request.args.get("orden", "asc")
 
     resultados = paises
 
@@ -60,7 +60,6 @@ def lista_paises():
 
 @app.route("/pais/<int:pais_id>")
 def detalle_pais(pais_id):
-    # TODO: completar lógica de detalle
     pais = next((p for p in paises if p["id"] == pais_id), None)
     if pais is None:
         abort(404)
